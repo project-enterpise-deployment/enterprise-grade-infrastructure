@@ -1,21 +1,27 @@
-# Terraform
+# Specific Terraform paths (absolute and relative)
+terraform/environments/dev/.terraform/
+terraform/environments/dev/.terraform.lock.hcl
+terraform/environments/dev/terraform.tfvars
+terraform/environments/dev/.terraform
+terraform/environments/dev/.terraform.lock.hcl
+terraform/environments/dev/terraform.tfvars
+
+# General Terraform exclusions
 **/.terraform/*
 *.tfstate
 *.tfstate.*
 *.tfvars
 *.tfvars.json
 .terraform.lock.hcl
-crash.log
-crash.*.log
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
 .terraformrc
 terraform.rc
-kubernetes/.terraform/
 
 # Kubernetes
+kubernetes/.terraform/
 kubeconfig*
 *.kubeconfig
 .kube/
@@ -50,4 +56,6 @@ Thumbs.db
 
 # Keys and certificates
 *.pem
-*.key.terraform/
+*.key
+*.crt
+*.cert
