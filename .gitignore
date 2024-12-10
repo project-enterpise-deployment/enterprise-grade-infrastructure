@@ -1,6 +1,52 @@
-terraform.tfvars
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
 *.tfvars
-backend.conf
-terraform.tfvars
-*.tfvars
-backend.conf
+*.tfvars.json
+.terraform.lock.hcl
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Kubernetes
+kubeconfig*
+*.kubeconfig
+.kube/
+*secrets.yaml
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.backup
+
+# Keys and certificates
+*.pem
+*.key
