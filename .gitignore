@@ -1,36 +1,22 @@
-# Specific Terraform paths (absolute and relative)
+# Ignore Terraform files
 terraform/environments/dev/.terraform/
 terraform/environments/dev/.terraform.lock.hcl
-terraform/environments/dev/terraform.tfvars
-terraform/environments/dev/.terraform
-terraform/environments/dev/.terraform.lock.hcl
+terraform/environments/dev/terraform.tfstate
 terraform/environments/dev/terraform.tfvars
 
-# General Terraform exclusions
 **/.terraform/*
 *.tfstate
 *.tfstate.*
 *.tfvars
 *.tfvars.json
 .terraform.lock.hcl
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-.terraformrc
-terraform.rc
 
-# Kubernetes
+# Ignore Kubernetes secrets and configurations
 kubernetes/.terraform/
 kubeconfig*
 *.kubeconfig
 .kube/
 *secrets.yaml
-
-# Environment variables
-.env
-.env.*
-*.env
 
 # IDE/Editor
 .vscode/
@@ -39,23 +25,11 @@ kubeconfig*
 *.swo
 *~
 
-# OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
 # Logs and temporary files
 *.log
 *.tmp
 *.bak
 *.backup
 
-# Keys and certificates
-*.pem
-*.key
-*.crt
-*.cert
+# OS-specific
+.DS_Store
