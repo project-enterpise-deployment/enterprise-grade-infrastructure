@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-stable
+  namespace: task-manager
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+      version: stable
+  template:
+    metadata:
+      labels:
+        app: frontend
+        version: stable
+    spec:
+      containers:
+      - name: frontend
+        image: siddiqitaha/ent-frontend:v1.0
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
